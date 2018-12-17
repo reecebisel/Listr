@@ -14,6 +14,9 @@
   <%= form.label :title %>
   <%= form.text_field :title %>
 
+  <%= form.label :type %>
+  <%= form.select :type, [['Chores'], ['Errands'], ['School'], ['Work'] ] %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
