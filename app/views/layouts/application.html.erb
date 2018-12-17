@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Listr</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <head>
+	<title>Listr</title>
+	<%= csrf_meta_tags %>
+	<%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-  </head>
+	<%= stylesheet_link_tag    'application', media: 'all' %>
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+	<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+	<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    </head>
 
-  <body>
-    <%= render partial: 'layouts/navbar' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <body>
+	<%= render partial: 'layouts/navbar' %>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 
-    <%= yield %>
-  </body>
+	<%= yield %>
+    </body>
 </html>

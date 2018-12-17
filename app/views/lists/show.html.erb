@@ -1,4 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<h1><%= @list.title %></h1>
+<table>
+    <thead>
+	<tr>
+	    <th colspan="3"></th> <!-- Enough room for our list item, an edit link and a delete link. -->
+	</tr>
+    </thead>
+    <tbody>
+	<% @list.list_items.each do |list_item| %>
+	    <tr>
+		<td><%= list_item.description %></td>
+		<td><%= link_to 'Edit', edit_list_item_path(list_item) %></td>
+		<td><%= button_to 'Destroy', list_item, method: :delete %></td>
+	    </tr>
+	<% end %>
+    </tbody>
+</table>
+
+<%= link_to 'New List Item', new_list_list_item_path(list_id: @list.id) %>
+<div>
+    <%= link_to 'Edit', edit_list_path(@list) %> |
+    <%= link_to 'Back', lists_path %>
+</div>
