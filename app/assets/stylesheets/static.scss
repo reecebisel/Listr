@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #BAD;
+  background-color: #154360;
   color: #FFF;
 
   H1 {
@@ -14,4 +14,13 @@
   p {
     font-size: 1.5em;
   }
+}
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+  background-color:  #85929E;
+  border-color:  #85929E
+}
+
+a {
+  color: #85929E;
 }
