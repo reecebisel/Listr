@@ -1,11 +1,15 @@
+html {
+  background-color: #2C3E50;
+}
+
 .heading {
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #154360;
-  color: #FFF;
+  background-color: #445B72;
+  color: #BACDE1;
 
   H1 {
     font-size: 5em;
@@ -23,4 +27,12 @@
 
 a {
   color: #85929E;
+}
+
+label {
+  color: #CED69F;
+}
+
+h1 { 
+  color: #84A8AE;
 }
