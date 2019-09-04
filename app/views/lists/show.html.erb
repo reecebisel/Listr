@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h3><%= @list[:title] %></h3>
+<h4><i>Categories: </i></h4>
+<ul>
+  <% @categories.each do |cat| %>
+  <li><%= cat.title %></li>
+  <% end %>
+</ul>
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>

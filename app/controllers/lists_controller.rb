@@ -6,6 +6,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    @categories = List.find(params[:id]).categories.all
   end
 
   def new
@@ -17,7 +18,6 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-
     respond_to do |format|
       if @list.save
         format.html { redirect_to @list, notice: 'List was successfully created.' }
@@ -55,6 +55,6 @@ class ListsController < ApplicationController
     end
 
     def list_params
-      params.require(:list).permit(:title, :description)
+      params.require(:list).permit(:title, :description, category_ids: [])
     end
 end
