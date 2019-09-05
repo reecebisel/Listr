@@ -7,6 +7,7 @@ class ListsController < ApplicationController
 
   def show
     @categories = List.find(params[:id]).categories.all
+    @users = List.find(params[:id]).users.all
   end
 
   def new
@@ -17,7 +18,9 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(list_params)
+    list_attr = list_params.clone
+    list_attr[:user_ids] = [params[:list][:user_ids], current_user.id]
+    @list = List.new(list_attr)
     respond_to do |format|
       if @list.save
         format.html { redirect_to @list, notice: 'List was successfully created.' }
@@ -30,8 +33,11 @@ class ListsController < ApplicationController
   end
 
   def update
+    list_attr = list_params.clone
+    list_attr[:user_ids] = [params[:list][:user_ids], current_user.id]
+
     respond_to do |format|
-      if @list.update(list_params)
+      if @list.update(list_attr)
         format.html { redirect_to @list, notice: 'List was successfully updated.' }
         format.json { render :show, status: :ok, location: @list }
       else
@@ -55,6 +61,6 @@ class ListsController < ApplicationController
     end
 
     def list_params
-      params.require(:list).permit(:title, :description, category_ids: [])
+      params.require(:list).permit(:title, :description, :user_ids, category_ids: [])
     end
 end

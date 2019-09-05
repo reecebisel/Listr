@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :models
   resources :categories
   get 'categories/index'
   get 'categories/show'
