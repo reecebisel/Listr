@@ -10,6 +10,11 @@
       </ul>
     </div>
   <% end %>
+  <label>Select categories for this list: </label>
+  <%= form.collection_check_boxes(:category_ids, Category.all, :id, :title, {prompt: "Choose a category" }) %><br> 
+  <br>
+  <label>Select additional user for this list (limit one additional to yourself)</label>
+  <%= form.collection_select(:user_ids, User.all, :id, :email, :include_blank => 'none') %><br> 
 
   <%= form.label :title %>
   <%= form.text_field :title %>

@@ -1,5 +1,21 @@
 <p id="notice"><%= notice %></p>
 
+<<<<<<< HEAD
 <h4><%= @list[:title] %></h4>
+=======
+<h3><%= @list[:title] %></h3>
+<h4><i>Categories: </i></h4>
+<ul>
+  <% @categories.each do |cat| %>
+  <li><%= cat.title %></li>
+  <% end %>
+</ul>
+<h4><i>Users: </i></h4>
+<ul>
+  <% @users.each do |user| %>
+  <li><%= user.email %></li>
+  <% end %>
+</ul>
+>>>>>>> ivan-dev
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>
