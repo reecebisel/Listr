@@ -1,24 +1,14 @@
-# README
+# Listr
+A list app for Shareworks, to access ruby knowledge. This is a time-boxed exercise with 4 issues to replicate the issues that may arise day to day.  You have *4 hours* to resolve as many as these issues as you can. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Select 1 issue to work on at a time. Please read each issue carefully as their requirements are sometimes not as simple as they suggest. If you are stuck or don’t understand the requirements, it is your responsibility to reach out  for clarification. 
 
-Things you may want to cover:
+## Getting Started
+`bundle install`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Contributing 
+To contribute to this repo, follow the steps below.
+* Fork the repo
+* Code some magic. **1 pull request per issue**
+* Add tests around new features
+* Request reviewers for PR. 
